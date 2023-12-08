@@ -1,10 +1,17 @@
+"""
+Este script ejecuta un menú interactivo que permite al usuario realizar diversas operaciones en un conjunto de datos de vehículos eléctricos.
+Importa funciones del módulo 'funcionesMenu' para mostrar el menú y ejecutar las opciones seleccionadas por el usuario.
+
+Cada opción del menú llama a funciones específicas para llevar a cabo operaciones como leer un archivo CSV, visualizar datos, mostrar estadísticas,
+realizar transformaciones y más. El bucle continuará ejecutándose hasta que el usuario elija salir.
+
+Nota: Asegúrate de tener el módulo 'funcionesMenu' disponible en el mismo directorio o especifica la ruta correcta.
+"""
 from funciones.funcionesMenu import *
 
 while True:
-    mostrar_menu()  
-    # Solicitar al usuario que ingrese una opción
+    mostrar_menu()
     opcion = input("\nSelecciona una opción: ")
-    # Evaluar la opción ingresada por el usuario
     if opcion == '1':
         opcion1()
     elif opcion == '2':
