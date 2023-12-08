@@ -3,7 +3,7 @@ from funciones.funcionesMenu import *
 while True:
     mostrar_menu()  
     # Solicitar al usuario que ingrese una opción
-    opcion = input("\nSelecciona una opción (1-4): ")
+    opcion = input("\nSelecciona una opción: ")
     # Evaluar la opción ingresada por el usuario
     if opcion == '1':
         opcion1()
@@ -15,8 +15,12 @@ while True:
         opcion4()
     elif opcion == '5':
         opcion5()
+    elif opcion == '6':
+        opcion6()
+    elif opcion == '7':
+        opcion7()
     elif opcion == '0':
         print("Saliendo del programa. ¡Hasta luego!")
         break
     else:
-        print("Opción no válida. Por favor, ingresa un número del 1 al 4.")
+        print("Opción no válida. Por favor")
