@@ -1,3 +1,27 @@
+# Este script proporciona un menú interactivo con opciones para realizar diversas operaciones
+# en un conjunto de datos de vehículos eléctricos. Utiliza funciones definidas en los módulos
+# 'funcionesLectura' y 'transformacionesCsv'. Cada opción del menú llama a funciones específicas
+# para realizar operaciones como leer un archivo CSV, visualizar ciudades, mostrar tipos de datos,
+# y realizar diversas transformaciones en los datos.
+
+# Funciones importadas de 'funcionesLectura':
+# - leerCsv(): Lee un archivo CSV.
+# - visualizarCity(): Muestra ciudades distintas.
+
+# Funciones importadas de 'transformacionesCsv':
+# - mostrarTiposDeDatosCsv(): Muestra los tipos de datos de las columnas del CSV.
+# - distribucionEstado(): Muestra la distribución por estado.
+# - distribucionCondado(): Muestra la distribución por condado.
+# - rangoElectrico(): Muestra el rango eléctrico.
+# - comparacionRangoElectrico(): Realiza comparaciones entre los rangos eléctricos.
+# - normalizacionRangoElectrico(): Normaliza el rango eléctrico.
+# - categoriasRangoElectrico(): Muestra las categorías del rango eléctrico.
+
+# Cada opción del menú llama a la función correspondiente para ejecutar la operación seleccionada.
+
+# Nota: Asegúrate de tener los módulos 'funcionesLectura' y 'transformacionesCsv' disponibles
+# en el mismo directorio o especifica la ruta correcta.
+
 from funciones.funcionesLectura import *
 from funciones.tranformacionesCsv import *
 
@@ -27,7 +51,7 @@ def opcion2():
 
 def opcion3():
     print("Has seleccionado la Opción 3.")
-    leerColumnas()
+    mostrarTiposDeDatosCsv()
 
 
 def opcion4():
