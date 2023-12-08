@@ -8,6 +8,8 @@ def mostrar_menu():
     print("3. Mostrar las columnas del csv")
     print("4. Distribucion estado")
     print("5. Distribucion condado")
+    print("6. Rango electrico")
+    print("7. Comparacion Rango electrico")
     print("0. Salir\n")
 
 
@@ -30,6 +32,17 @@ def opcion4():
     print("Has seleccionado la Opción 4.")
     distribucionEstado()
 
+
 def opcion5():
     print("Has seleccionado la Opción 5")
     distribucionCondado()
+
+
+def opcion6():
+    print("Has seleccionado la Opción 6")
+    rangoElectrico()
+
+
+def opcion7():
+    print("Has seleccionado la Opción 6")
+    comparacionRangoElectrico()

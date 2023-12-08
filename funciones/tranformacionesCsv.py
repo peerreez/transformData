@@ -42,3 +42,28 @@ def distribucionCondado():
     plt.ylabel('Cantidad de Vehículos Eléctricos')
     plt.xticks(rotation=45)
     plt.show()
+
+
+def rangoElectrico():
+    df = pd.read_csv(ruta_csv)
+    # Estadísticas resumidas del rango eléctrico
+    stats_range = df['Electric Range'].describe()
+    print(stats_range)
+    # Histograma del rango eléctrico
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df['Electric Range'], bins=20, kde=True)
+    plt.title('Distribución del Rango Eléctrico de Vehículos')
+    plt.xlabel('Rango Eléctrico')
+    plt.ylabel('Frecuencia')
+    plt.show()
+
+
+def comparacionRangoElectrico():
+    df = pd.read_csv(ruta_csv)
+    # Comparación de rango eléctrico por año del modelo
+    plt.figure(figsize=(12, 6))
+    sns.boxplot(x='Model Year', y='Electric Range', data=df)
+    plt.title('Comparación de Rango Eléctrico por Año del Modelo')
+    plt.xlabel('Año del Modelo')
+    plt.ylabel('Rango Eléctrico')
+    plt.show()
