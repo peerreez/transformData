@@ -1,17 +1,29 @@
 from funciones.funcionesLectura import *
+from funciones.tranformacionesCsv import *
+
 
 def mostrar_menu():
-    print("\n1. Opción 1")
-    print("2. Opción 2")
-    print("3. Opción 3")
+    print("1. Leer Csv")
+    print("2. Visualizar ciudades distintas")
+    print("3. Mostrar las columnas del csv")
     print("4. Salir\n")
+
 
 def opcion1():
     print("Lectura del fichero Electric Vehicle Population Data\n")
     leerCsv()
 
+
 def opcion2():
-    print("Has seleccionado la Opción 2.")
+    print("Se van a mostrar todas las ciudades distintas")
+    visualizarCity()
+
 
 def opcion3():
     print("Has seleccionado la Opción 3.")
+    leerColumnas()
+
+
+def opcion4():
+    print("Has seleccionado la Opción 3.")
+    leerColumnas()
