@@ -13,6 +13,8 @@ while True:
         opcion3()
     elif opcion == '4':
         opcion4()
+    elif opcion == '5':
+        opcion5()
     elif opcion == '0':
         print("Saliendo del programa. ¡Hasta luego!")
         break
