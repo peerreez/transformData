@@ -16,3 +16,10 @@ def leerCsv():
     except Exception as e:
         print(f"Error inesperado: {e}")
 
+
+def leerColumnas():
+    datos = pd.read_csv(ruta_csv)
+    columnas_y_tipos = datos.dtypes
+    print("Tipos de datos de cada columna:")
+    print(columnas_y_tipos)
+
