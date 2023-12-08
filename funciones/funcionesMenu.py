@@ -3,13 +3,15 @@ from funciones.tranformacionesCsv import *
 
 
 def mostrar_menu():
-    print("1. Leer Csv")
-    print("2. Visualizar ciudades distintas")
-    print("3. Mostrar las columnas del csv")
-    print("4. Distribucion estado")
-    print("5. Distribucion condado")
-    print("6. Rango electrico")
-    print("7. Comparacion Rango electrico")
+    print("1. Leer CSV")
+    print("2. Visualizar Ciudades Distintas")
+    print("3. Mostrar las columnas del CSV")
+    print("4. Distribucion Estado")
+    print("5. Distribucion Condado")
+    print("6. Rango Electrico")
+    print("7. Comparacion Rango Electrico")
+    print("8. Normalizacion Rango Electrico")
+    print("8. Categorias Rango Electrico")
     print("0. Salir\n")
 
 
@@ -44,5 +46,15 @@ def opcion6():
 
 
 def opcion7():
-    print("Has seleccionado la Opción 6")
+    print("Has seleccionado la Opción 7")
     comparacionRangoElectrico()
+
+
+def opcion8():
+    print("Has seleccionado la Opción 8")
+    normalizacionRangoElectrico()
+
+
+def opcion9():
+    print("Has seleccionado la Opción 9")
+    categoriasRangoElectrico()

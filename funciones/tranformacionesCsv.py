@@ -67,3 +67,18 @@ def comparacionRangoElectrico():
     plt.xlabel('Año del Modelo')
     plt.ylabel('Rango Eléctrico')
     plt.show()
+
+
+def normalizacionRangoElectrico():
+    df = pd.read_csv(ruta_csv)
+    df['Electric Range Normalized'] = (df['Electric Range'] - df['Electric Range'].mean()) / df['Electric Range'].std()
+    print(df['Electric Range Normalized'])
+
+
+def categoriasRangoElectrico():
+    df = pd.read_csv(ruta_csv)
+    # Creación de categorías para el rango eléctrico
+    bins = [0, 100, 200, float('inf')]
+    labels = ['Bajo', 'Medio', 'Alto']
+    df['Range Category'] = pd.cut(df['Electric Range'], bins=bins, labels=labels, right=False)
+    print(df['Range Category'])

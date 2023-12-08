@@ -17,9 +17,16 @@ def leerCsv():
         print(f"Error inesperado: {e}")
 
 
-def leerColumnas():
-    datos = pd.read_csv(ruta_csv)
-    columnas_y_tipos = datos.dtypes
-    print("Tipos de datos de cada columna:")
-    print(columnas_y_tipos)
+def leerColumnas(ruta_csv):
+    try:
+        datos = pd.read_csv(ruta_csv)
+        columnas_y_tipos = datos.dtypes
+        print("Tipos de datos de cada columna:")
+        print(columnas_y_tipos)
+    except FileNotFoundError:
+        print(f"No se encontró el archivo en la ruta: {ruta_csv}")
+    except pd.errors.EmptyDataError:
+        print(f"El archivo en la ruta {ruta_csv} está vacío.")
+    except pd.errors.ParserError:
+        print(f"No se pudo leer el archivo en la ruta {ruta_csv}. Verifica el formato CSV.")
 
