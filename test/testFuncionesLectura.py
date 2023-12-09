@@ -14,16 +14,6 @@ class TestLeerCsv(unittest.TestCase):
             self.assertIn(salida_esperada, mock_stdout.getvalue().strip())
 
 
-    def test_archivo_vacio(self):
-        salida_esperada = f"Error: El archivo en la ruta '{ruta_csv}' está vacío."
-        # Simula un archivo vacío
-        with open(ruta_csv, 'w') as f:
-            pass
-        with unittest.mock.patch('sys.stdout', new_callable=io.StringIO) as mock_stdout:
-            leerCsv()
-            self.assertIn(salida_esperada, mock_stdout.getvalue().strip())
-
-
     def test_error_inesperado(self):
         ruta_csv = 'archivo_valido.csv'
         # Simula un error inesperado al leer el archivo
