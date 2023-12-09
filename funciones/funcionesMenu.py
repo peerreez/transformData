@@ -23,7 +23,7 @@
 # en el mismo directorio o especifica la ruta correcta.
 
 from funciones.funcionesLectura import *
-from funciones.tranformacionesCsv import *
+from funciones.transformacionesCsv import *
 
 
 def mostrar_menu():
